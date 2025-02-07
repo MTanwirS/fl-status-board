@@ -32,7 +32,8 @@ const FlightDetail = () => {
           const data2 = await response2.json();
           
           setFlight(data2);
-          setError(null); // Reset error state if fetch is successful
+          setError(null); 
+          
         } catch (error) {
           if (error instanceof Error){
             if (error.message.includes('NetworkError')) {
@@ -48,7 +49,7 @@ const FlightDetail = () => {
         }
       };
 
-      fetchFlight();
+      fetchFlight(); // Fetches the flight information
     }
   }, [id]);
 
