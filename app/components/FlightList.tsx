@@ -17,11 +17,12 @@ interface Flight {
 const FlightList = () => {
   const [flights, setFlights] = useState<Flight[]>([]);
   const [error, setError] = useState<string | null>(null);
-  const fetchInterval = 60000; // Interval in milliseconds (e.g., 10000ms = 10 seconds)
+  const fetchInterval = 60000; // milliseconds
   const API_URL_1 = "https://flight-status-mock.core.travelopia.cloud/flights";
 
 
   useEffect(() => {
+    
     const fetchFlights = async () => {
       try {
         const response1 = await fetch(API_URL_1);
@@ -44,9 +45,9 @@ const FlightList = () => {
       }
     };
 
-    fetchFlights(); // Initial fetch
+    fetchFlights(); // Fetch the flight table fisrt time.
 
-    const intervalId = setInterval(fetchFlights, fetchInterval); // Auto-fetch data every 'x' seconds
+    const intervalId = setInterval(fetchFlights, fetchInterval); // Refreshes the page with updates at a regular interval, (60 seconds)
 
     // Cleanup the interval on component unmount
     return () => clearInterval(intervalId);
