@@ -35,6 +35,7 @@ describe('FlightList', () => {
     fetch.resetMocks();
   });
 
+  // tests retrieval of flight details from API
   test('renders flight list from API', async () => {
     fetch.mockResponseOnce(JSON.stringify(mockApiData));
 
@@ -45,7 +46,8 @@ describe('FlightList', () => {
       expect(screen.getByText('A2B9')).toBeInTheDocument();
     });
   });
-
+  
+// tests when no retrieval from API
   test('handles API error', async () => {
     fetch.mockReject(new Error('Failed to fetch'));
 
