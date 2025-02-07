@@ -1,0 +1,41 @@
+.flightList {
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.flightTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.flightTable th, .flightTable td {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 12px;
+}
+
+.flightTable th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+.flightItem a {
+  text-decoration: none;
+  color: #0070f3;
+  transition: color 0.3s;
+}
+
+.flightItem a:hover {
+  color: #005bb5;
+}
+
+.error {
+  color: red;
+  margin-top: 1rem;
+  background-color: #ffe4e4;
+  padding: 1rem;
+  border-radius: 8px;
+}
