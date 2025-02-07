@@ -46,34 +46,49 @@ A well-documented README file will help us understand how to set up and run the 
 
 # Flight Status Table Board
 
-A web application (FE) to track flight status.
+A Next(React) based web application (FE) to track flight status.
 
 ## INstallation
- Clone the repository
+ Clone the repository fl-status-board using git-bash or cmd.
+ 
 ```
-git clone 
-cd status-table
+git clone https://github.com/MTanwirS/fl-status-board.git
+cd fl-status-board
 npm install
 ```
 
-Run the application
+Build and run the application
+```
+npm run build
+npm run start
+```
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+Use <kbd>Ctrl</kbd>+<kbd>c</kbd> to stop the server.
+
+Run unit tests
+```
+npm test
+```
+Use <kbd>Ctrl</kbd>+<kbd>c</kbd> to stop the server.
+
+Run development server
 ```
 npm run dev
 ```
 
-Run tests
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+Use <kbd>Ctrl</kbd>+<kbd>c</kbd> to stop the server.
+
+Website structure:
 ```
-npm test
+/ => Home page
+|
+/flight => Flight Status Table
+|
+/flight/:id  => Detailed flight information
 ```
-
-/
-Home page
-
-/flight
-Flight Status Table
-
-/flight/:id
-Detailed flight information
 
 
 
@@ -83,18 +98,6 @@ Detailed flight information
 # Next JS
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
@@ -117,3 +120,5 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+```
