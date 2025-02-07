@@ -6,7 +6,8 @@ import { useParams } from 'next/navigation';
 
 jest.mock('next/navigation', () => ({
   useParams: jest.fn(),
-}));
+  })
+);
 
 const mockApiData = {
   id: 2,
@@ -24,6 +25,7 @@ describe('FlightDetail', () => {
     (useParams as jest.Mock).mockReturnValue({ id: '2' });
   });
 
+  //tests normal retrieval of flight details from API
   test('renders flight details from API', async () => {
     fetch.mockResponseOnce(JSON.stringify(mockApiData));
 
@@ -34,7 +36,8 @@ describe('FlightDetail', () => {
       expect(screen.getByText('Delayed')).toBeInTheDocument();
     });
   });
-
+  
+  // tests for API error
   test('handles API error', async () => {
     fetch.mockReject(new Error('Failed to fetch'));
 
