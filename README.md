@@ -48,8 +48,13 @@ A well-documented README file will help us understand how to set up and run the 
 
 A Next(React) based web application (FE) to track flight status.
 
+## Prerequisites
+- NodeJs [https://nodejs.org/en](https://nodejs.org/en)
+- Git [https://git-scm.com/](https://git-scm.com/)
+
 ## INstallation
- Clone the repository fl-status-board using git-bash or cmd.
+ Download the repository or 
+ Clone the repository `fl-status-board` using git-bash or cmd.
  
 ```
 git clone https://github.com/MTanwirS/fl-status-board.git
@@ -98,8 +103,6 @@ Website structure:
 # Next JS
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-```
-
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
@@ -121,4 +124,3 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
 
-```
